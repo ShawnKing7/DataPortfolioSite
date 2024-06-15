@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  font-family: "Maven Pro", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  color: #3877FF;
+}
+.portfolio-container{
+    min-height: 100vh;
+    width: 100%;
+}
+.navlist{
+    display: flex;
+    gap: 3.5rem;
+    background-color: #262525;
+    height: 13vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.navlist li{
+    list-style: none;
+}
+.navlist li a{
+    text-decoration: none;
+}
+
+/* Left container */
+.left-container {
+    width: 70%;
+    background-color: #262525;
+    height: 100vh;
+    padding-left: 5rem;
+    float: left;
+    align-items: center;
+}
+
+/* Right container */
+
+.right-container {
+    width: 30%;
+    background: linear-gradient(173deg, #262525, #3877FF 128%);
+    height: 100vh;
+    float: left;
+}
+.content {
+    margin-top: 4rem;
+    margin-left: 4rem;
+}
+.content h1 {font-size: 1.5rem;
+    color: #fff;
+}
+.content h2 {font-size: 4rem;
+    color: #5DB9EE;
+}
+.content h3 {
+    color: #fff;
+}
+.design .circle {
+    aspect-ratio: 1;
+    position: absolute;
+    border-radius: 50%;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+}
+.circle:nth-child(1){
+    background: linear-gradient(90deg, transparent 50%, #262525 50%);
+    width: 19rem;
+}
+.circle:nth-child(2){
+    width: 15rem;
+    background-image: url("images/Shawn\ Profile.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    border: .4rem solid #FFF;
+    box-shadow: 0 0 40px #3877FF,
+    inset 0 0 40px #3877FF,
+    0 0 40px #5DB9EE;
+}
