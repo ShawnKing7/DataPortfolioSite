@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&display=swap');
+
+::-webkit-scrollbar {
+    width: 1.25em;
+}
+::-webkit-scrollbar-track {
+    background-color: #262525;
+    
+}
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #3877FF 0%, #262525 80%); /* Gradient from light blue to dark inside */
+    border: .125em solid #00bfff; /* Lighter border for contrast */
+    border-radius: 100vw; /* Fully rounded thumb */
+    box-shadow: 0 0 15px 2px rgba(56, 119, 255, 0.8), inset 0 0 20px rgba(93, 185, 238, 0.8), 0 0 30px rgba(56, 119, 255, 0.4), 0 0 50px rgba(93, 185, 238, 0.5); /* Glowing effects */
+    transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease; 
+}
+::-webkit-scrollbar-thumb:hover {
+    background: hsl(215, 100%, 55%); /* Darker blue when hovered */
+    box-shadow: 0 0 15px 3px rgba(56, 119, 255, 0.8), inset 0 0 25px rgba(93, 185, 238, 0.8), 0 0 40px rgba(56, 119, 255, 0.6), 0 0 60px rgba(93, 185, 238, 0.7); /* Stronger glow on hover */
+    transform: scale(1.05);
+}
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Maven Pro", sans-serif;
+    color: #3877FF;
+}
+
+/* Portfolio Container */
+.portfolio-container {
+    min-height: 100vh;
+    width: 100%;
+}
+
+/* Navigation Bar */
+.navlist {
+    display: flex;
+    gap: 3.5rem;
+    background-color: #262525;
+    height: 13vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+/* Navbar container */
+.navlist {
+    display: flex;
+    gap: 3.5rem;
+    background-color: #262525;
+    height: 13vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Individual links inside the navbar */
+.navlist li {
+    list-style: none;
+}
+
+/* Links with the icons */
+.navlist li a {
+    text-decoration: none;
+}
+
+/* Styling the navbar icons */
+.navbar-icon {
+    width: 130px;  /* Set the width */
+    height: 40px;  /* Set the height */
+    object-fit: contain; /* Ensures images cover the area, cropping where necessary */
+    transition: transform 0.3s ease; /* Smooth zoom effect on hover */
+}
+
+.navlist li a img[src*="email.png"] {
+    width: 40px;          /* Make the email logo smaller */
+}
+/* General navbar image styling */
+.navlist li a img {
+    max-width: 100%;      /* Prevent image from being too large */
+    height: auto;         /* Keep aspect ratio */
+    object-fit: contain;  /* Prevent cropping */
+    display: block;       /* Remove unwanted space below the image */
+    margin: 0 auto;       /* Center image if needed */
+}
+
+
+/* Hover effect on Certifications */
+.navbar-icon:hover {
+    transform: scale(1.15); /* 1.15x zoom on hover */
+}
+
+
+
+/* First Container (Intro with Gradient + Image) */
+.intro-container {
+    background: linear-gradient(to bottom, #3877FF 0%, #262525 100%);
+    width: 100%;
+    padding: 2.5rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: white;
+    flex-direction: column; /* Ensures that image and text stack vertically */
+    text-align: center;
+}
+
+.intro-text h1,
+.intro-text h3 {
+    color: white; /* Ensures the text is white */
+}
+
+.intro-text h1 {
+    font-size: 2rem;
+}
+
+.intro-text h2 {
+    font-size: 4rem;
+    color: #5DB9EE;
+}
+
+.intro-text h3 {
+    font-size: 1.5rem;
+}
+
+/* Image Container */
+.image-container {
+    position: relative;
+    margin-top: 2rem; /* Adds space between text and image */
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 0.4rem solid #fff;
+    box-shadow: 0 0 15px #3877FF, inset 0 0 20px #5DB9EE, 0 0 30px #3877FF, 0 0 50px #5DB9EE;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Second Container (Certifications Grid) */
+/* Certifications Container */
+.certification-header {
+    padding: 10px 0;
+    background-color: #262525; /* Black background */
+    color: white; /* White text */
+    text-align: center; /* Center align the text */
+}
+
+.certification-header h3 {
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+.certification-header p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    color: #5DB9EE; /* Light blue text */
+}
+
+
+.certifications-container {
+    display: flex;
+    justify-content: center; /* Ensures the grid is centered in the parent container */
+    width: 100%;
+    background-color: #262525;
+}
+
+/* Certifications Grid */
+.certifications {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Create 3 equal-width columns */
+    gap: 1rem; /* Spacing between the images */
+    padding: 2rem;
+    max-width: 100%;
+    justify-items: center; /* Center the items horizontally inside the grid cells */
+    align-items: center; /* Center the items vertically inside the grid cells */
+}
+
+/* Individual Certification Images */
+.certifications img {
+    width: 133px; /* Fixed size of the certification image */
+    height: 133px; /* Ensure square shape */
+    margin: 30px;
+    object-fit: contain; 
+    transition: transform 0.55s ease-in-out;/* Ensures the image maintains its aspect ratio */
+}
+
+
+
+.certifications img:hover {
+    transform: scale(1.25);
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .navlist {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .intro-container {
+        padding: 3rem 0;
+    }
+
+    .image-container {
+        margin-top: 2rem;
+        right: 0;
+        bottom: 10%;
+    }
+    /* Image Container */
+    .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%); /* Converts the image to black and white */
+}
+
+    .certifications {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .intro-container {
+        flex-direction: column;
+        padding: 2rem 0;
+    }
+
+    .image-container {
+        right: 0;
+        bottom: 10%;
+        margin-top: 1rem;
+    }
+
+    .certifications {
+        grid-template-columns: 1fr;
+    }
+}
