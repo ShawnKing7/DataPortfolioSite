@@ -9,7 +9,7 @@
 }
 ::-webkit-scrollbar-thumb {
     background: linear-gradient(to bottom, #3877FF 0%, #262525 80%); /* Gradient from light blue to dark inside */
-    border: .125em solid #00bfff; /* Lighter border for contrast */
+    border: .09375em solid #00bfff; /* Lighter border for contrast */
     border-radius: 100vw; /* Fully rounded thumb */
     box-shadow: 0 0 15px 2px rgba(56, 119, 255, 0.8), inset 0 0 20px rgba(93, 185, 238, 0.8), 0 0 30px rgba(56, 119, 255, 0.4), 0 0 50px rgba(93, 185, 238, 0.5); /* Glowing effects */
     transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease; 
@@ -19,6 +19,17 @@
     box-shadow: 0 0 15px 3px rgba(56, 119, 255, 0.8), inset 0 0 25px rgba(93, 185, 238, 0.8), 0 0 40px rgba(56, 119, 255, 0.6), 0 0 60px rgba(93, 185, 238, 0.7); /* Stronger glow on hover */
     transform: scale(1.05);
 }
+
+/* Ensure containers have the correct background color */
+.intro-container, 
+.portfolio-container,
+.certifications-container, 
+.certifications, 
+.cta-container {
+    background-color: #262525 !important; /* Force background color */
+}
+
+
 /* Global Styles */
 * {
     margin: 0;
@@ -45,6 +56,7 @@
     align-items: center;
     list-style: none;
 }
+
 /* Navbar container */
 .navlist {
     display: flex;
@@ -91,7 +103,6 @@
 .navbar-icon:hover {
     transform: scale(1.15); /* 1.15x zoom on hover */
 }
-
 
 
 /* First Container (Intro with Gradient + Image) */
@@ -176,8 +187,9 @@
 .certifications {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* Create 3 equal-width columns */
-    gap: 1rem; /* Spacing between the images */
-    padding: 2rem;
+    grid-row-gap: .5em;
+    gap: .5em 1em; /* Spacing between the images */
+    padding: 1rem;
     max-width: 100%;
     justify-items: center; /* Center the items horizontally inside the grid cells */
     align-items: center; /* Center the items vertically inside the grid cells */
@@ -189,13 +201,42 @@
     height: 133px; /* Ensure square shape */
     margin: 30px;
     object-fit: contain; 
-    transition: transform 0.55s ease-in-out;/* Ensures the image maintains its aspect ratio */
+    transition: transform 0.7s ease-in-out;/* Ensures the image maintains its aspect ratio */
 }
 
 
 
 .certifications img:hover {
     transform: scale(1.25);
+}
+
+/* Call to Action (CTA) Button Styles */
+.cta-container {
+    text-align: center;
+    margin-top: 5em;  /* Adjust spacing as necessary */
+    margin-bottom: 3em;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: #3877FF; /* Primary color */
+    color: #fff;
+    font-size: 1.25rem;
+    text-decoration: none; /* Remove underline */
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 50px; /* Rounded corners */
+    border: 2px solid #5DB9EE; /* Lighter border */
+    box-shadow: 0 0 15px 2px rgba(56, 119, 255, 0.8), inset 0 0 20px rgba(93, 185, 238, 0.8), 0 0 30px rgba(56, 119, 255, 0.4), 0 0 50px rgba(93, 185, 238, 0.5); /* Glowing effects */
+    transition: all 0.3s ease-in-out;
+}
+
+.cta-button:hover {
+    background-color: #5DB9EE; /* Lighter blue for hover effect */
+    border-color: #3877FF; /* Darker border when hovered */
+    box-shadow: 0 0 20px 3px rgba(56, 119, 255, 0.8), inset 0 0 25px rgba(93, 185, 238, 0.8), 0 0 40px rgba(56, 119, 255, 0.6), 0 0 60px rgba(93, 185, 238, 0.7); /* Stronger glow */
+    transform: scale(1.05); /* Slight scale up on hover */
 }
 
 /* Responsive Styling */
